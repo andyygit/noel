@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+  }
+  a {
+    color: inherit;
+  }
+  .header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 10px 15px;
+    color: white;
+    background: #0b0b0b !important;
+    /* background: green !important; */
+    transition: padding 0.2s ease-in, background 0.2s ease-in;
+  }
+  .header.minimize {
+    padding: 5px;
+    /* background: red !important; */
+  }
+  .header .logo img{
+    transition: height 0.2s ease;
+  }
+  .header.minimize .logo img{
+    height: 2rem;
+    transition: height 0.2s ease;
+  }
+  .menu ul {
+    margin: 0 auto;
+    list-style: none;
+  }
+  .menu ul li{
+    margin: 0 9px;
+  }
+  .menu a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  .menu a:hover {
+    text-decoration: underline;
+    color: darkorange;
+  }
+  .hero img {
+    object-position: 100% 100%;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: visible;
+  }
+  .viewport-header {
+    position: relative;
+    height: 100vh;
+    color: white;
+  }
+  .viewport-header h1 {
+    font-size: 5vw;
+  }
+  #heroCard {
+    max-width: 500px;
+  }
+  .main,
+  footer {
+    position: relative;
+    background: white;
+    display: block;
+  }
+  .main p {
+    margin: 0;
+  }
+  footer .container {
+    padding: 50px 0;
+  }
