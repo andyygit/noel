@@ -1,78 +1,133 @@
 * {
-    box-sizing: border-box;
-  }
-  a {
-    color: inherit;
-  }
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+a {
+  color: inherit;
+}
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 10px 15px;
+  color: white;
+  background: #0b0b0b !important;
+  /* background: green !important; */
+  transition: padding 0.2s ease-in, background 0.2s ease-in;
+}
+.header > div {
+  position: relative;
+}
+.header.minimize {
+  padding: 5px;
+  /* background: red !important; */
+}
+.header .logo img{
+  transition: height 0.2s ease;
+}
+.header.minimize .logo img{
+  height: 2rem;
+  transition: height 0.2s ease;
+}
+.menu ul {
+  margin: 0 auto;
+  list-style: none;
+}
+.menu ul li{
+  margin: 0 9px;
+}
+.menu a {
+  display: inline-block;
+  text-decoration: none;
+}
+.menu a:hover {
+  text-decoration: underline;
+  color: darkorange;
+}
+.hero img {
+  object-position: 100% 100%;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: visible;
+}
+.viewport-header {
+  position: relative;
+  height: 100vh;
+  color: white;
+}
+.viewport-header > div {
+  padding: 2em;
+}
+.viewport-header h1 {
+  font-size: 5vw;
+  font-weight: 800;
+}
+#heroCard {
+  max-width: 500px;
+}
+.main,
+footer {
+  position: relative;
+  background: white;
+  display: block;
+}
+.main > div {
+  gap: 2em;
+}
+footer {
+  text-align: center;
+  color: #999;
+}
+@media screen and (max-width: 960px) {
   .header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    padding: 10px 15px;
-    color: white;
-    background: #0b0b0b !important;
-    /* background: green !important; */
-    transition: padding 0.2s ease-in, background 0.2s ease-in;
-  }
-  .header.minimize {
     padding: 5px;
-    /* background: red !important; */
   }
-  .header .logo img{
-    transition: height 0.2s ease;
-  }
-  .header.minimize .logo img{
+  .header .logo img {
     height: 2rem;
-    transition: height 0.2s ease;
+  }
+  .menu {
+    position: absolute;
+    top: 37px;
+    width: 100%;
+    background-color: #0b0b0b;
+    display: none;
   }
   .menu ul {
-    margin: 0 auto;
-    list-style: none;
+    flex-direction: column;
   }
-  .menu ul li{
-    margin: 0 9px;
+  .menu ul li {
+    padding: 5px;
   }
-  .menu a {
-    display: inline-block;
-    text-decoration: none;
+  #burger {
+    display: block !important;
+    cursor: pointer;
   }
-  .menu a:hover {
-    text-decoration: underline;
-    color: darkorange;
-  }
-  .hero img {
-    object-position: 100% 100%;
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    visibility: visible;
-  }
-  .viewport-header {
-    position: relative;
-    height: 100vh;
-    color: white;
+  .viewport-header > div {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
   }
   .viewport-header h1 {
-    font-size: 5vw;
+    font-size: 4em;
   }
-  #heroCard {
-    max-width: 500px;
+  .main > div {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
   }
-  .main,
-  footer {
-    position: relative;
-    background: white;
-    display: block;
+  .main img {
+    width: 100%;
   }
-  .main p {
-    margin: 0;
-  }
-  footer .container {
-    padding: 50px 0;
-  }
+}
+.testimonial {
+    background-image: url("../img/bg/25.png"), url("../img/bg/31.png");
+    background-position: left, right;
+    background-repeat: no-repeat;
+}
