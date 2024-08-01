@@ -57,6 +57,21 @@ a {
   left: 0;
   visibility: visible;
 }
+.hero .clipart {
+  position: relative;
+}
+.hero .clipart div {
+  width: 500px;
+  height: 250px;
+  position: absolute;
+  bottom: -140px;
+  left: 0;
+  z-index: 5;
+  background-image: url("../img/flat-statistics-presentation-with-arrows.png");
+  background-position: left;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 .viewport-header {
   position: relative;
   height: 100vh;
@@ -108,6 +123,9 @@ footer {
   #burger {
     display: block !important;
     cursor: pointer;
+  }
+  .hero .clipart div {
+    display: none;
   }
   .viewport-header > div {
     flex-direction: column;
